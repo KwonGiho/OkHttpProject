@@ -65,19 +65,19 @@ public class MainActivity extends AppCompatActivity {
                 Gson gson = gsonBuilder.create();
 
 
-                String result = response.body().toString();
+                String result = response.body().string();
 
                 List<Contributor> contributors = gson.fromJson(result, new TypeToken<List<Contributor>>() {
                 }.getType());
 
-
-                /*for(Contributor contributor : contributors) {
-                    stringBuilder.append(contributor.toString());
-                }*/
+                final StringBuilder stringBuilder = new StringBuilder();
+                for(Contributor contributor : contributors) {
+                    stringBuilder.append(contributor.toString()+"\n");
+                }
                 MainActivity.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        //textView.setText(stringBuilder.toString());
+                        textView.setText(stringBuilder.toString());
                     }
                 });
 
