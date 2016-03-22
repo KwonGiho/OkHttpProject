@@ -1,4 +1,4 @@
-package com.example.adminstrator.okhttpproject;
+﻿package com.example.adminstrator.okhttpproject;
 
 
 import android.os.Bundle;
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 음.. 제가 JSON을 많이 사용해보지 못해서, JSON을 완벽히 사용할 수 있으면 GSON으로 넘어가야 겠다~ 했습니다.
 그래서 아래와 같이 코드를 작성했는데, 코딩을 차츰 해보니, Java1.3버전에서 작성된 JSON lib라고 나오더라구요!
 에공..이게 뭐꼬~~ 하면서
-시간이 촉박해져서 GSON으로 급하게 갈아 탔습니다~ㅠ
+시간이 촉박해져서 GSON으로 급하게 갈아 탔습니다~!!
 
 String body = response.body().string();
                 JSONParser jsonParser = new JSONParser();
